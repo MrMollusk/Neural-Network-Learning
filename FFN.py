@@ -1,6 +1,4 @@
-import random as rand
 import numpy as np
-
 
 class Layer:
     def __init__(self, num_input, num_neuron, learning_rate = 0.1):
@@ -53,8 +51,3 @@ for epoch in range(100000):
         print(f"Epoch {epoch}, Loss: {loss:.4f}")
 
 print("Final output after training:\n", layer.forward(input_data))
-
-# print(f"The layer is: {layer}")
-# input = np.array([[0.2], [0.5], [0.2]])
-# output = layer.forward(input)
-# print(f"output is: {output}")
