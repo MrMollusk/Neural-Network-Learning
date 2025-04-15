@@ -38,7 +38,7 @@ layer = Layer(3, 5)
 input_data = np.array([1, 2, 3])
 target_output = np.array([[0.5], [0.8], [0.1], [0.3], [0.9]])
 
-for epoch in range(100000):
+for iteration in range(100000):
 
     predicted_output = layer.forward(input_data)
 
@@ -46,8 +46,8 @@ for epoch in range(100000):
     
     layer.backpropagation(error)
 
-    if epoch % 100 == 0:
+    if iteration % 100 == 0:
         loss = np.mean(np.square(error))
-        print(f"Epoch {epoch}, Loss: {loss:.4f}")
+        print(f"Epoch {iteration}, Loss: {loss:.4f}")
 
 print("Final output after training:\n", layer.forward(input_data))
